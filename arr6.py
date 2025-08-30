@@ -1,10 +1,13 @@
+nums1=[5,12,3,9,8,1,7]
 nums=[5,12,3,9,8,1,7]
-n=len(nums)
+n=len(nums1)
 k=int(input("Enter the no of places to be rotated:"))
 k=k%n
 #Using slicing
-# nums[:]=nums[n-k:]+ nums[:n-k]
-# print(nums)
+nums1[:]=nums[n-k:]+ nums[:n-k]
+print(nums1)
+n=len(nums)
+nums=[5,12,3,9,8,1,7]
 def reverse(nums,left,right):
     while left<right:
         nums[left],nums[right]=nums[right],nums[left]
