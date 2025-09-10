@@ -1,3 +1,4 @@
+#Merge 2 sorted list with unique elemnts
 nums1=[1,1,1,2,4,6,7]
 nums2=[1,2,3,6,7,8,9,10]
 n=len(nums1)
