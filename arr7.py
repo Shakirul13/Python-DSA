@@ -1,3 +1,4 @@
+#Move zeroes to end
 nums=[1,0,2,4,3,0,0,3,5,1]
 #Brute Force
 temp=[]
