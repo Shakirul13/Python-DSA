@@ -28,3 +28,30 @@ def better(arr):
             my_set.add(arr[j])
     return [list(ans)for ans in res]
 print(better(arr))
+
+def Optimal(nums):
+        res=[]
+        n=len(nums)
+        nums.sort()
+        for i in range(0,n):
+            if i!=0 and nums[i]==nums[i-1]:
+                continue
+            j=i+1
+            k=n-1
+            while j<k:
+                total_sum=nums[i]+nums[j]+nums[k]
+                if total_sum<0:
+                    j+=1
+                elif total_sum>0:
+                    k-=1
+                else:
+                    temp=[nums[i],nums[j],nums[k]]
+                    res.append(temp)
+                    j+=1
+                    k-=1
+                    while j<k and nums[j]==nums[j-1]:
+                        j+=1
+                    while j<k and nums[k]==nums[k+1]:
+                        k-=1
+        return res
+print(Optimal(arr))
