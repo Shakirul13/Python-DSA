@@ -16,6 +16,24 @@ def brute(nums):
     return res
 print(brute(nums))
 
+#Better Solution O(n^3)
+def better(nums):
+    target=0
+    res=set()
+    n=len(nums)
+    for i in range(0,n):
+        for j in range(i+1,n):
+            my_set=set()
+            for k in range(j+1,n):
+                required= target-(nums[i]+nums[j]+nums[k])
+                if required in my_set:
+                    temp=[nums[i],nums[j],nums[k],required]
+                    temp.sort()
+                    res.add(tuple(temp))
+                my_set.add(nums[k])
+    return [list(ans)for ans in res]
+print(better(nums))
+
 #Optimal solution O(n^3)
 nums2=[1,1,1,1,2,2,3,3,3,4,4,4,5,5]
 def optimal(nums):
