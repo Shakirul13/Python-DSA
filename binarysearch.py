@@ -1,5 +1,5 @@
 nums=[2,5,8,12,19,46,131]
-target=131
+target=46
 #Iterative Approach
 def binarysearch(nums,target):
     n=len(nums)
