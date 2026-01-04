@@ -19,3 +19,4 @@ while temp is not None:
     temp.next=prev
     prev=temp
     temp=front
+return prev
