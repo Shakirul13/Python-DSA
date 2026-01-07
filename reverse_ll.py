@@ -1,6 +1,6 @@
 #Reverse a linked list:logic
 #Brute force solution : reverse the ll by changing the value
-#5->7->10->2->80
+#5->7->10->2->80->
 temp=head
 stack=[]
 while temp is not None:
@@ -19,4 +19,4 @@ while temp is not None:
     temp.next=prev
     prev=temp
     temp=front
-return prev
+prev
